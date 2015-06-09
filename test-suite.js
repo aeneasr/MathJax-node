@@ -22,7 +22,7 @@ function runTests(remote) {
         ) {
         asyncTasks.push(function (pushCallback) {
             remote.render(getNewJSON(), function (output, exception, message) {
-                console.log(output, exception, message);
+                //console.log(output, exception, message);
                 pushCallback();
             });
         });

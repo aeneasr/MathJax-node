@@ -93,7 +93,7 @@ function render(input, callback) {
 
 function handleMathJax(document, cb) {
     var M = require('./lib/mj-single-concurrent');
-    delete require.cache[require.resolve('./lib/mj-single-concurrent')];
+    //delete require.cache[require.resolve('./lib/mj-single-concurrent')];
     var widthBreakpoints = {
             c24: 90, c18: 70, c16: 60, c15: 55,
             c14: 52, c12: 45, c11: 41, c9: 30,
