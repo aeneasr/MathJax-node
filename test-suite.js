@@ -22,7 +22,6 @@ function runTests(remote) {
         ) {
         asyncTasks.push(function (pushCallback) {
             remote.render(getNewJSON(), function (output, exception, message) {
-                //console.log(output, exception, message);
                 pushCallback();
             });
         });
@@ -42,26 +41,26 @@ function runTests(remote) {
 }
 
 
-function getNewJSON2() {
+function getNewJSON() {
     return '[['
-        + '{&quot;col&quot;:24,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;}],['
-        + '{&quot;col&quot;:24,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;}'
+        + '{&quot;col&quot;:24,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;}],['
+        + '{&quot;col&quot;:24,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;}'
         +']]';
 }
 
-function getNewJSON() {
+function getNewJSON2() {
     return '[[{&quot;col&quot;:12,&quot;content&quot;:&quot;|a|b|\\n|-|-|\\n|c|d|&quot;},{&quot;col&quot;:12,&quot;content&quot;:&quot;GAFE\\n\\n$$'
         + Math.floor(Math.random() * 30) + '\\\\cdot' + Math.floor(Math.random() * 1500) + '\\\\cdot\\\\frac '
         + Math.floor(Math.random() * 257) + 'x' + Math.floor(Math.random() * 100) + ' ' + ' '
         + Math.floor(Math.random() * 42) + 'y-' + Math.floor(Math.random() * 30)
         + ' \\\\frac12*a`*b`+34567$$ text \\n noch mehr text&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
-        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\frac{' + Math.floor(Math.random() * 10000) + ',' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}'
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}],['
+        + '{&quot;col&quot;:8,&quot;content&quot;:&quot;$$\\\\frac{' + Math.floor(Math.random() * 10000) + '}{' + Math.floor(Math.random() * 10000) + '}$$&quot;},{&quot;col&quot;:16,&quot;content&quot;:&quot;OK&quot;}'
         +']]';
 }
