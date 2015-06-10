@@ -5,3 +5,4 @@ batik/*
 mathjax/*
 !mathjax/README.md
 .idea
+.log

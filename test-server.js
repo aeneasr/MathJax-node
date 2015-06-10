@@ -15,7 +15,7 @@ var dnode = require('dnode'),
     htmlEntities = new HtmlEntities(),
     converter,
     server,
-    port = 7070,
+    port = 7071,
     host = '127.0.0.1',
     M = require('./lib/mj-single'),
     mjAPI =  M;

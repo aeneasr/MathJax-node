@@ -1,32 +1,43 @@
 {
-    "name": "MathJax-node",
-    "version": "0.3.0",
-    "description": "API's for calling MathJax from node.js",
-    "keywords": ["MathJax","math","svg","MathML","TeX","AsciiMath"],
-    "maintainers": [
-        "MathJax Consortium <info@mathjax.org> (http://www.mathjax.org)"
-    ],
-    "bugs": {
-        "url": "http://github.com/mathjax/MathJax-node/issues"
-    },
-    "license": {
-        "type": "Apache",
-        "url": "http://github.com/mathjax/MathJax-node/blob/master/LICENSE"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/mathjax/MathJax-node.git"
-    },
-    "dependencies": {
-        "jsdom": "3.1.1",
-        "speech-rule-engine": "*",
-        "yargs": "*",
-        "MathJax": "https://github.com/mathjax/MathJax/tarball/mathjax-node-2.5.1",
-        "dnode": "1.2.0",
-        "showdown": "~0.3.1",
-        "async": "~1.0.0",
-        "html-entities": "~1.1.2",
-        "cheerio": "^0.19.0"
-    },
-    "main": "./lib/mj-page.js"
+  "name": "MathJax-node",
+  "version": "0.3.0",
+  "description": "API's for calling MathJax from node.js",
+  "keywords": [
+    "MathJax",
+    "math",
+    "svg",
+    "MathML",
+    "TeX",
+    "AsciiMath"
+  ],
+  "maintainers": [
+    "MathJax Consortium <info@mathjax.org> (http://www.mathjax.org)"
+  ],
+  "bugs": {
+    "url": "http://github.com/mathjax/MathJax-node/issues"
+  },
+  "license": {
+    "type": "Apache",
+    "url": "http://github.com/mathjax/MathJax-node/blob/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mathjax/MathJax-node.git"
+  },
+  "dependencies": {
+    "MathJax": "https://github.com/mathjax/MathJax/tarball/mathjax-node-2.5.1",
+    "async": "~1.0.0",
+    "cheerio": "^0.19.0",
+    "dnode": "1.2.0",
+    "html-entities": "~1.1.2",
+    "jsdom": "3.1.1",
+    "segfault-handler": "^0.2.4",
+    "showdown": "~0.3.1",
+    "speech-rule-engine": "*",
+    "yargs": "*"
+  },
+  "main": "./lib/mj-page.js",
+  "devDependencies": {
+    "segfault-handler": "^0.2.4"
+  }
 }

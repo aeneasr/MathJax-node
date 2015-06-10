@@ -4,7 +4,7 @@
 var dnode = require('dnode');
 var async = require('async');
 
-var d = dnode.connect(7070);
+var d = dnode.connect(7071);
 
 var timestampsStart = [], timestampsEnd = [];
 var i = 0;
@@ -30,7 +30,7 @@ function runTests(remote) {
         timestampsEnd[i] = new Date().getTime();
         console.log('Time used for %d call(s): %d ms. Average time: %d ms. Loop: %d', calls,
             timestampsEnd[i] - timestampsStart[i], (timestampsEnd[i] - timestampsStart[i]) / calls, i);
-        if (i <= 4) {
+        if (i <= 10) {
             i++;
             runTests(remote);
         } else {

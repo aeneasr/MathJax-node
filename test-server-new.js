@@ -7,6 +7,10 @@
  *
  */
 
+var SegfaultHandler = require('segfault-handler');
+
+SegfaultHandler.registerHandler();
+
 var dnode = require('dnode'),
     Showdown = require('showdown'),
     cheerio = require('cheerio'),
@@ -15,7 +19,7 @@ var dnode = require('dnode'),
     htmlEntities = new HtmlEntities(),
     converter,
     server,
-    port = 7070,
+    port = 7071,
     host = '127.0.0.1';
 
 // Load custom extensions
@@ -186,8 +190,9 @@ function handleMathJax(document, cb) {
     $('.math, .mathInline').each(pushRenderTask);
     if (asyncTasks.length > 0) {
         async.parallel(asyncTasks, function () {
+            mjAPI.close();
             cb($.html());
-            //global.gc();
+            global.gc();
         });
     } else {
         cb(document);
